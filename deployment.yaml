@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tapp-app
+  namespace: default # 💡 올바른 위치 (문서 최상단 metadata 바로 아래)
   labels:
     app: tapp-app
 spec:

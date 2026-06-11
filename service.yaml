@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: tapp-service
+  namespace: default # 💡 올바른 위치 (문서 최상단 metadata 바로 아래)
 spec:
   selector:
     app: tapp-app

@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: tapp-ingress
+  namespace: default # 💡 올바른 위치 (문서 최상단 metadata 바로 아래)
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
@@ -9,7 +10,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: ingcloud.cloud # 사용자님의 도메인
+#  - host: ingcloud.cloud # 사용자님의 도메인
     http:
       paths:
       - path: /
